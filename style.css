@@ -1,0 +1,79 @@
+/* ========================================
+   Part 4: Basic CSS Styling
+   ======================================== */
+
+/* Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ID Selector */
+#main-heading {
+    text-align: center;
+    background-color: #dff0d8;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#main-heading h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#main-heading p {
+    font-size: 16px;
+}
+
+/* Class Selector */
+.expense-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.expense-section h2 {
+    color: #2c3e50;
+}
+
+/* Element Selector */
+.expense-section label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Element Selector */
+.expense-section input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ID Selector */
+#your-expenses {
+    background-color: #fff3cd;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#your-expenses h2 {
+    color: #856404;
+}
+
+#your-expenses p {
+    color: #666;
+    font-style: italic;
+}
