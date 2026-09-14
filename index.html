@@ -13,17 +13,29 @@
 <body>
 
     <!-- Part 1: Page Structure -->
-    <header id="main-heading">
-        <!-- Budget logo -->
-        <img
-            src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4b0.svg"
-            alt="Money bag budget tracker logo"
-            width="60"
-        >
+ <header id="main-heading"> 
+    <img 
+        src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4b0.svg"
+        alt="Money bag budget tracker logo"
+        width="60"
+    >
 
-        <h1>My Budget Tracker</h1>
-        <p>Track your income and expenses in one place.</p>
-    </header>
+    <h1>My Budget Tracker</h1> 
+    <p>Track your income and expenses in one place.</p> 
+</header>
+
+<section class="multimedia-section">
+    <h2>Learn More About Budgeting</h2>
+
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/pF8J4rfexW0"
+        title="Beginners Guide to Budgeting"
+        frameborder="0"
+        allowfullscreen
+    ></iframe>
+</section>
 
     <main>
 
@@ -31,136 +43,77 @@
         <section class="expense-section">
             <h2>Add Expense</h2>
 
-            <form>
-                <!-- Expense Name -->
-                <label for="expense-name">Expense Name</label>
-                <input
-                    type="text"
-                    id="expense-name"
-                    name="expense-name"
-                    placeholder="Enter expense name"
-                >
+            <label for="expense-name">Expense Name</label>
+            <input
+                type="text"
+                id="expense-name"
+                placeholder="Enter expense name"
+            >
 
-                <!-- Expense Amount -->
-                <label for="expense-amount">Amount</label>
-                <input
-                    type="number"
-                    id="expense-amount"
-                    name="expense-amount"
-                    placeholder="Enter amount"
-                >
+            <label for="expense-amount">Amount</label>
+            <input
+                type="number"
+                id="expense-amount"
+                placeholder="Enter amount"
+            >
 
-                <!-- Expense Category -->
-                <label for="expense-category">Category</label>
-                <select
-                    id="expense-category"
-                    name="expense-category"
-                >
-                    <option value="">Select a category</option>
-                    <option value="food">Food</option>
-                    <option value="transport">Transport</option>
-                    <option value="rent">Rent</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="other">Other</option>
-                </select>
+            <label for="expense-category">Category</label>
+            <input
+                type="text"
+                id="expense-category"
+                placeholder="Enter expense category"
+            >
+<section id="your-expenses" class="expenses-section"> 
+    <h2>Your Expenses</h2>
 
-                <!-- Expense Date -->
-                <label for="expense-date">Date</label>
-                <input
-                    type="date"
-                    id="expense-date"
-                    name="expense-date"
-                >
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+        </thead>
 
-                <!-- Add Expense Button -->
-                <button type="button">Add Expense</button>
-            </form>
+        <tbody>
+            <tr>
+                <td>Groceries</td>
+                <td>KSh 2,500</td>
+                <td>Food</td>
+                <td>2026-09-01</td>
+            </tr>
 
-            <!-- Interactive instructions -->
-            <details>
-                <summary>How to use this tracker</summary>
-                <p>
-                    Enter the name and amount of an expense, choose its category,
-                    select the date, and click "Add Expense". The button will be
-                    connected to JavaScript in a future lesson.
-                </p>
-            </details>
-        </section>
+            <tr>
+                <td>Bus Fare</td>
+                <td>KSh 800</td>
+                <td>Transport</td>
+                <td>2026-09-03</td>
+            </tr>
 
-        <!-- Part 3: Your Expenses -->
-        <section id="your-expenses" class="expenses-section">
-            <h2>Your Expenses</h2>
+            <tr>
+                <td>Monthly Rent</td>
+                <td>KSh 15,000</td>
+                <td>Rent</td>
+                <td>2026-09-05</td>
+            </tr>
 
-            <!-- Expense Table -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount</th>
-                        <th>Category</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
+            <tr>
+                <td>Movie Night</td>
+                <td>KSh 1,200</td>
+                <td>Entertainment</td>
+                <td>2026-09-07</td>
+            </tr>
 
-                <tbody>
-                    <tr>
-                        <td>Groceries</td>
-                        <td>KSh 2,500</td>
-                        <td>Food</td>
-                        <td>2026-09-01</td>
-                    </tr>
-
-                    <tr>
-                        <td>Bus Fare</td>
-                        <td>KSh 800</td>
-                        <td>Transport</td>
-                        <td>2026-09-03</td>
-                    </tr>
-
-                    <tr>
-                        <td>Monthly Rent</td>
-                        <td>KSh 15,000</td>
-                        <td>Rent</td>
-                        <td>2026-09-05</td>
-                    </tr>
-
-                    <tr>
-                        <td>Movie Night</td>
-                        <td>KSh 1,200</td>
-                        <td>Entertainment</td>
-                        <td>2026-09-07</td>
-                    </tr>
-
-                    <tr>
-                        <td>Mobile Data</td>
-                        <td>KSh 1,000</td>
-                        <td>Other</td>
-                        <td>2026-09-10</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Part 4: Multimedia Content -->
-        <section class="multimedia-section">
-            <h2>Learn More About Budgeting</h2>
-
-            <p>
-                Watch this beginner-friendly budgeting video to learn more
-                about managing your expenses.
-            </p>
-
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/pF8J4rfexW0"
-                title="Beginners Guide to Budgeting"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            ></iframe>
-        </section>
-
+            <tr>
+                <td>Mobile Data</td>
+                <td>KSh 1,000</td>
+                <td>Other</td>
+                <td>2026-09-10</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
     </main>
 
 </body>

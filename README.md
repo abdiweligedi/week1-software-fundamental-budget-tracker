@@ -1,76 +1,55 @@
 # My Budget Tracker
 
-## Project Description
+## Description
 
-My Budget Tracker is a simple HTML and CSS webpage designed to help users
-record and view their expenses.
+My Budget Tracker is a simple webpage for recording and viewing expenses.
 
-This project was originally created in Week 1 and has been upgraded in Week 2
-with an expense table, an improved expense form, multimedia content,
-interactive elements, and advanced CSS selectors.
+## index.html
 
-## Files
+The HTML file contains the Budget Tracker structure, expense form,
+category dropdown, expense table, sample expenses, image, YouTube video,
+and interactive details section.
 
-### index.html
+## style.css
 
-The `index.html` file contains the structure and content of the Budget Tracker.
+The CSS file controls the appearance of the page, including the form,
+table, button, hover effects, alternating table rows, and focus effects.
 
-It includes:
+## Expense Table
 
-- A main page heading and description
-- A money bag logo using an `<img>` element
-- An Add Expense form
-- Text, number, date, and category inputs
-- A category dropdown with five expense categories
-- An Add Expense button
-- A collapsible "How to use this tracker" section
-- An expense table containing five sample expenses
-- A budgeting video embedded with an `<iframe>`
+The table uses `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, and `<td>`.
 
-### style.css
+It contains five sample expenses with their name, amount, category, and date.
 
-The `style.css` file controls the appearance of the Budget Tracker.
+## Form
 
-It includes:
+The form contains expense name, amount, category, and date fields.
 
-- Page and section styling
-- Form and input styling
-- Button styling
-- Expense table borders and spacing
-- A colored table header
-- Alternating table row colors
-- Table row hover effects
-- Focus effects for form inputs
-- Responsive styling for smaller screens
+The category dropdown contains:
 
-## HTML Table
+- Food
+- Transport
+- Rent
+- Entertainment
+- Other
 
-The expense table uses the correct HTML table structure:
+The Add Expense button uses `type="button"`.
 
-- `<table>` creates the table
-- `<thead>` contains the table headings
-- `<tbody>` contains the expense data
-- `<tr>` creates each table row
-- `<th>` creates the column headings
-- `<td>` contains the expense information
+## Multimedia
 
-The table contains five sample expenses.
+The project contains an image logo and an embedded YouTube video.
 
-## Expense Form
+## Advanced CSS Selectors
 
-The Add Expense section uses a proper `<form>` element.
+The project uses:
 
-The category field is a `<select>` dropdown containing:
+- `.expenses-section td`
+- `.expense-section > form`
+- `tr:nth-child(even)`
+- `input:not([type="submit"])`
+- `input:focus`
 
-1. Food
-2. Transport
-3. Rent
-4. Entertainment
-5. Other
+## Interactive Elements
 
-Each form input has a clear and matching `id` and `name` attribute.
-
-The Add Expense button uses:
-
-```html
-<button type="button">Add Expense</button>
+The project includes a `<details>` and `<summary>` section,
+table row hover effects, and a pointer cursor on the button.
