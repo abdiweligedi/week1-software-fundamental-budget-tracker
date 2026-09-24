@@ -5,213 +5,392 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Budget Tracker</title>
+    <title>SpendWise Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-content">
+    <div class="dashboard">
 
-            <div class="header-text">
-                <h1>My Budget Tracker</h1>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
 
-                <p>
-                    Track your income and expenses in one place.
-                </p>
+            <div class="brand">
+                <h1>SpendWise</h1>
+                <p>Smart money management</p>
+            </div>
 
-                <a href="#add-expense">
-                    Start Tracking
+            <nav class="navigation">
+
+                <a href="#" class="nav-item active">
+                    <span>📊</span>
+                    <span>Dashboard</span>
                 </a>
+
+                <a href="#" class="nav-item">
+                    <span>💳</span>
+                    <span>Expenses</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>📁</span>
+                    <span>Categories</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>💰</span>
+                    <span>Savings</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Budget Tracker</p>
+                <span>2026</span>
             </div>
 
-            <div class="header-image">
-                <img
-                    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
-                    alt="Person planning a budget">
-            </div>
-
-        </div>
-    </header>
+        </aside>
 
 
-    <!-- INTRO -->
-    <section class="intro">
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
 
-        <img
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
-            alt="Budget icon">
+            <!-- HEADER -->
+            <header class="dashboard-header">
 
-        <div>
-            <h2>Take Control of Your Money</h2>
+                <div class="welcome">
+                    <p class="eyebrow">Financial Overview</p>
 
-            <p>
-                Record and monitor your daily expenses.
-            </p>
-        </div>
+                    <h2>Welcome back!</h2>
 
-    </section>
+                    <p>
+                        Here's an overview of your spending this month.
+                    </p>
+                </div>
 
+                <div class="profile">
 
-    <!-- ADD EXPENSE -->
-    <section class="add-expense" id="add-expense">
+                    <div class="profile-avatar">
+                        JD
+                    </div>
 
-        <h2>Add Expense</h2>
+                    <div>
+                        <strong>John Doe</strong>
+                        <span>Personal Account</span>
+                    </div>
 
-        <label for="expense-name">
-            Expense Name:
-        </label>
+                </div>
 
-        <input
-            type="text"
-            id="expense-name"
-            placeholder="Enter expense name">
-
-
-        <label for="expense-amount">
-            Amount (KSh):
-        </label>
-
-        <input
-            type="number"
-            id="expense-amount"
-            placeholder="Enter amount">
+            </header>
 
 
-        <label for="expense-category">
-            Category:
-        </label>
+            <!-- SUMMARY -->
+            <section class="summary">
 
-        <select id="expense-category">
+                <div class="summary-item">
+                    <span>Total Budget</span>
+                    <strong>KSh 50,000</strong>
+                </div>
 
-            <option value="">
-                Select a category
-            </option>
+                <div class="summary-item">
+                    <span>Total Spent</span>
+                    <strong>KSh 27,450</strong>
+                </div>
 
-            <option value="food">
-                Food
-            </option>
+                <div class="summary-item">
+                    <span>Remaining</span>
+                    <strong>KSh 22,550</strong>
+                </div>
 
-            <option value="transport">
-                Transport
-            </option>
-
-            <option value="rent">
-                Rent
-            </option>
-
-            <option value="entertainment">
-                Entertainment
-            </option>
-
-            <option value="other">
-                Other
-            </option>
-
-        </select>
-
-        <button>
-            Add Expense
-        </button>
-
-    </section>
+            </section>
 
 
-    <!-- EXPENSES -->
-    <section class="expenses">
+            <!-- CATEGORY SECTION -->
+            <section class="category-section">
 
-        <h2>Your Expenses</h2>
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Spending Categories</p>
+                        <h2>Monthly Overview</h2>
+                    </div>
 
-        <table>
-
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th>Category</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td>Groceries</td>
-                    <td>KSh 500</td>
-                    <td>Food</td>
-                    <td>2026-09-01</td>
-                </tr>
-
-                <tr>
-                    <td>Bus Fare</td>
-                    <td>KSh 100</td>
-                    <td>Transport</td>
-                    <td>2026-09-01</td>
-                </tr>
-
-                <tr>
-                    <td>House Rent</td>
-                    <td>KSh 15,000</td>
-                    <td>Rent</td>
-                    <td>2026-09-02</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </section>
+                    <span class="month">September 2026</span>
+                </div>
 
 
-    <!-- HOW TO USE -->
-    <details>
+                <!-- CATEGORY CARDS -->
+                <div class="category-grid">
 
-        <summary>
-            How to use this tracker
-        </summary>
+                    <!-- FOOD -->
+                    <a href="#" class="category-card">
 
-        <p>
-            Enter the name of your expense, enter the amount,
-            select a category, and click Add Expense.
-        </p>
+                        <div class="card-top">
+                            <div class="category-icon food">
+                                🍔
+                            </div>
 
-    </details>
+                            <span class="percentage">
+                                24%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Food</h3>
+
+                            <p>
+                                Groceries and meals
+                            </p>
+                        </div>
+
+                        <div class="amount">
+                            <strong>KSh 6,600</strong>
+                            <span>of KSh 10,000</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar food-progress"></div>
+                        </div>
+
+                    </a>
 
 
-    <!-- ========================= -->
-    <!-- YOUTUBE VIDEO -->
-    <!-- ========================= -->
+                    <!-- TRANSPORT -->
+                    <a href="#" class="category-card">
 
-    <section class="video-section">
-    <h2>Budgeting Tips</h2>
-    <p>Watch this video to learn more about budgeting.</p>
+                        <div class="card-top">
+                            <div class="category-icon transport">
+                                🚌
+                            </div>
 
-   <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/7GSGA8SVsOs?origin=http://127.0.0.1:5500"
-    title="Budgeting Tips"
-    frameborder="0"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-</iframe>
-    
+                            <span class="percentage">
+                                12%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Transport</h3>
+
+                            <p>
+                                Bus fare and fuel
+                            </p>
+                        </div>
+
+                        <div class="amount">
+                            <strong>KSh 3,200</strong>
+                            <span>of KSh 6,000</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar transport-progress"></div>
+                        </div>
+
+                    </a>
 
 
-    <!-- FOOTER -->
-    <footer>
+                    <!-- RENT -->
+                    <a href="#" class="category-card">
 
-        <p>
-            My Budget Tracker &copy; 2026
-        </p>
+                        <div class="card-top">
+                            <div class="category-icon rent">
+                                🏠
+                            </div>
 
-    </footer>
+                            <span class="percentage">
+                                55%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Rent</h3>
+
+                            <p>
+                                Monthly house rent
+                            </p>
+                        </div>
+
+                        <div class="amount">
+                            <strong>KSh 15,000</strong>
+                            <span>of KSh 15,000</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar rent-progress"></div>
+                        </div>
+
+                    </a>
+
+
+                    <!-- ENTERTAINMENT -->
+                    <a href="#" class="category-card">
+
+                        <div class="card-top">
+                            <div class="category-icon entertainment">
+                                🎮
+                            </div>
+
+                            <span class="percentage">
+                                8%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Entertainment</h3>
+
+                            <p>
+                                Movies and leisure
+                            </p>
+                        </div>
+
+                        <div class="amount">
+                            <strong>KSh 2,150</strong>
+                            <span>of KSh 5,000</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar entertainment-progress"></div>
+                        </div>
+
+                    </a>
+
+
+                    <!-- SAVINGS -->
+                    <a href="#" class="category-card">
+
+                        <div class="card-top">
+                            <div class="category-icon savings">
+                                💰
+                            </div>
+
+                            <span class="percentage">
+                                30%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Savings</h3>
+
+                            <p>
+                                Emergency fund
+                            </p>
+                        </div>
+
+                        <div class="amount">
+                            <strong>KSh 8,000</strong>
+                            <span>of KSh 10,000</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar savings-progress"></div>
+                        </div>
+
+                    </a>
+
+
+                    <!-- UTILITIES -->
+                    <a href="#" class="category-card">
+
+                        <div class="card-top">
+                            <div class="category-icon utilities">
+                                💡
+                            </div>
+
+                            <span class="percentage">
+                                15%
+                            </span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Utilities</h3>
+
+                            <p>
+                                Electricity and water
+                            </p>
+                        </div>
+
+                        <div class="amount">
+                            <strong>KSh 2,500</strong>
+                            <span>of KSh 4,000</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar utilities-progress"></div>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT ACTIVITY -->
+            <section class="activity">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Recent Activity</p>
+                        <h2>Latest Expenses</h2>
+                    </div>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+                        <span>🛒</span>
+
+                        <div>
+                            <strong>Groceries</strong>
+                            <small>Food • Today</small>
+                        </div>
+
+                        <b>- KSh 500</b>
+                    </div>
+
+                    <div class="activity-item">
+                        <span>🚌</span>
+
+                        <div>
+                            <strong>Bus Fare</strong>
+                            <small>Transport • Yesterday</small>
+                        </div>
+
+                        <b>- KSh 100</b>
+                    </div>
+
+                    <div class="activity-item">
+                        <span>🏠</span>
+
+                        <div>
+                            <strong>House Rent</strong>
+                            <small>Rent • 2 September</small>
+                        </div>
+
+                        <b>- KSh 15,000</b>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
 
 </body>
 
 </html>
-
