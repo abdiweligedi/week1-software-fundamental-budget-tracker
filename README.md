@@ -1,124 +1,225 @@
-```markdown
-# My Budget Tracker
+# SpendWise Dashboard Shell
+## Week 4 CSS Grid & Flexbox Challenge
+SpendWise is a modern financial dashboard interface based on the Budget Tracker project developed in previous weeks.
 
-## Week 3 Visual Design Challenge
+This week's work focuses on creating a responsive dashboard shell using CSS Grid, Flexbox, CSS custom properties, responsive media queries, and card micro-interactions.
 
-My Budget Tracker is a simple web application designed to help users record and monitor their daily expenses.
-
-For Week 3, I improved the existing Budget Tracker using CSS. I focused on color, typography, table and form styling, and the CSS Box Model without adding new functionality.
-
----
-
-## Project Files
-
-The project contains the following files:
-
-- `index.html` - Contains the structure and content of the Budget Tracker.
-- `style.css` - Contains all the visual styling and responsive design.
-- `README.md` - Explains the project and the design choices made.
+No JavaScript functionality was added. The dashboard uses realistic static financial information.
 
 ---
 
-## 1. Color Palette
+## Project Structure
 
-I selected a small and consistent color palette based mainly on blue and teal tones.
+```text
+SpendWise/
+├── index.html
+├── style.css
+└── README.md
+````
 
-The main colors include:
+### index.html
 
-- Dark blue (`#064663`) - Used for the header, footer, headings, and table header.
-- Teal (`#176b87`) - Used for the main action button.
-- Orange (`#f4a261`) - Used as an accent color for buttons and table borders.
-- Light blue-gray (`#eef4f6`) - Used as the page background.
-- White (`#ffffff`) - Used for the content cards.
+Contains the structure of the SpendWise dashboard, including:
 
-The colors are repeated throughout the application to create a consistent and professional appearance.
+* Sidebar navigation
+* Dashboard header
+* User profile section
+* Financial summary
+* Six financial category cards
+* Recent activity section
 
----
+### style.css
 
-## 2. Typography
+Contains all visual styling, including:
 
-I used two Google Fonts:
-
-- **Poppins** - Used for the main heading and section headings.
-- **DM Sans** - Used for body text, labels, form controls, buttons, and table content.
-
-The different fonts create a clear visual hierarchy while keeping the application easy to read.
-
----
-
-## 3. Table and Form Styling
-
-The Add Expense form was improved with:
-
-- Consistent padding inside input fields.
-- Borders around form controls.
-- Rounded corners.
-- Consistent font styling.
-- Focus effects when an input is selected.
-- A styled Add Expense button.
-- Hover effects on the button.
-
-The Expense Table was improved with:
-
-- A dark colored table header.
-- White header text.
-- Padding inside table cells.
-- Borders separating table content.
-- Alternating row colors.
-- Hover effects when moving over rows.
-- Rounded corners around the table.
-
-These changes make the form and table easier to read and use.
+* CSS Grid
+* Flexbox
+* CSS custom properties
+* Responsive layouts
+* Card styling
+* Hover and keyboard focus effects
+* Dark theme support
 
 ---
 
-## 4. CSS Box Model
+## 1. Dashboard Layout
 
-The CSS Box Model was intentionally used throughout the application.
+The dashboard contains a sidebar navigation and a main content area.
 
-### Margin
+The sidebar includes:
 
-Margin is used to create space between sections such as:
+* Dashboard
+* Expenses
+* Categories
+* Savings
+* Settings
 
-- Introduction
-- Add Expense form
-- Expense table
-- How to Use section
-- Budgeting Tips section
+The main dashboard includes six financial category cards:
 
-### Padding
+1. Food
+2. Transport
+3. Rent
+4. Entertainment
+5. Savings
+6. Utilities
 
-Padding is used to create space inside cards, table cells, buttons, and form inputs.
-
-### Borders
-
-Borders are used to define the edges of cards, form controls, and the expense table.
-
-### Border Radius
-
-Rounded corners are used on cards, buttons, inputs, the table, and images to create a modern appearance.
-
-The page heading, Add Expense form, and Expense Table are presented as visually distinct sections using these Box Model properties.
+Each card displays realistic financial information such as spending amounts, budgets, percentages, and progress indicators.
 
 ---
 
-## Responsive Design
+## 2. CSS Grid
 
-The Budget Tracker also includes CSS media queries so that the layout works on smaller screens.
+CSS Grid is used for the main dashboard structure.
 
-On mobile devices:
+The desktop layout uses:
 
-- The header changes from a two-column layout to a single-column layout.
-- Images resize to fit the screen.
-- Form and table cards receive smaller spacing.
-- The expense table can scroll horizontally when necessary.
-- The video adjusts to the available screen width.
+```css
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+```
+
+CSS Grid is also used for the category cards:
+
+```css
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+```
+
+This creates a structured dashboard layout with a fixed sidebar and flexible main content area.
+
+---
+
+## 3. Flexbox
+
+Flexbox is used throughout the dashboard to arrange content.
+
+Examples include:
+
+* Sidebar navigation
+* Dashboard header
+* User profile
+* Financial summary cards
+* Category card content
+* Recent activity
+* Navigation items
+
+For example:
+
+```css
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+```
+
+Flexbox makes the content easier to align and allows the layout to adapt to different screen sizes.
+
+---
+
+## 4. CSS Custom Properties
+
+The application's theme is defined using CSS variables inside `:root`.
+
+The main variables include:
+
+```css
+--brand
+--accent
+--background
+--surface
+--text
+--text-secondary
+```
+
+These variables are reused throughout the stylesheet to keep the design consistent.
+
+---
+
+## 5. Responsive Design
+
+The dashboard becomes a single-column layout on screens smaller than 768px.
+
+The responsive layout is created using:
+
+```css
+@media (max-width: 767px)
+```
+
+On smaller screens:
+
+* The sidebar moves above the main content.
+* Navigation items become more compact.
+* Summary items stack vertically.
+* Category cards become one column.
+* Header content stacks vertically.
+* Content spacing is reduced for smaller screens.
+
+The layout can be tested using the browser's DevTools Device Toolbar.
+
+---
+
+## 6. Card Micro-interactions
+
+The dashboard cards include subtle hover and keyboard focus effects.
+
+The animation uses:
+
+```css
+transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+```
+
+The transition lasts 200ms, which is below the required maximum of 250ms.
+
+Both mouse hover and keyboard focus are supported:
+
+```css
+.category-card:hover,
+.category-card:focus-visible {
+    transform: translateY(-4px);
+}
+```
+
+The cards move slightly upward and receive a stronger shadow when interacted with.
+
+This provides visual feedback without being distracting.
+
+---
+
+## 7. Dark Theme
+
+A dark theme is included using the required media query:
+
+```css
+@media (prefers-color-scheme: dark)
+```
+
+Only the CSS custom property values are overridden.
+
+This allows the dashboard to automatically adapt when the user's operating system or browser is using dark mode.
+
+---
+
+## 8. Technologies Used
+
+* HTML5
+* CSS3
+* CSS Grid
+* Flexbox
+* CSS Custom Properties
+* CSS Media Queries
+* Google Fonts
 
 ---
 
 ## Conclusion
 
-This week's work focused on improving the visual design of the existing Budget Tracker.
+The Week 4 SpendWise Dashboard Shell provides the visual foundation for the capstone project.
 
-The application now has a consistent color palette, custom typography, styled forms and tables, clear spacing, borders, rounded corners, and responsive behavior.
-```
+The dashboard uses modern CSS layout techniques, a consistent theme, responsive design, accessible keyboard focus states, subtle card interactions, and an optional dark theme.
