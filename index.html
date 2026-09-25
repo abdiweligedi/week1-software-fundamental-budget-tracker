@@ -30,29 +30,24 @@
             </div>
 
             <nav class="navigation">
-                <a href="#" class="nav-link active">
+                <a href="#dashboard" class="nav-link active">
                     <span>📊</span>
                     Dashboard
                 </a>
 
-                <a href="#" class="nav-link">
+                <a href="#expenses" class="nav-link">
                     <span>💰</span>
                     Expenses
                 </a>
 
-                <a href="#" class="nav-link">
+                <a href="#budget" class="nav-link">
                     <span>🎯</span>
-                    Budgets
+                    Budget
                 </a>
 
-                <a href="#" class="nav-link">
+                <a href="#activity" class="nav-link">
                     <span>📈</span>
-                    Reports
-                </a>
-
-                <a href="#" class="nav-link">
-                    <span>⚙️</span>
-                    Settings
+                    Activity
                 </a>
             </nav>
 
@@ -60,14 +55,16 @@
 
 
         <!-- Main Content -->
-        <main class="main-content">
+        <main class="main-content" id="dashboard">
 
             <!-- Header -->
             <header class="dashboard-header">
 
                 <div>
                     <p class="eyebrow">Personal Finance</p>
+
                     <h1>Dashboard</h1>
+
                     <p class="header-subtitle">
                         Keep track of your spending and stay within your budget.
                     </p>
@@ -86,25 +83,116 @@
 
 
             <!-- Summary -->
-            <section class="summary-section">
+            <section class="summary-section" id="budget">
 
                 <div class="summary-card">
                     <span class="summary-label">Monthly Budget</span>
-                    <strong class="summary-value">KES 50,000</strong>
-                    <span class="summary-note">Your planned monthly budget</span>
+
+                    <strong class="summary-value" id="budget-display">
+                        KES 50,000
+                    </strong>
+
+                    <span class="summary-note">
+                        Your planned monthly budget
+                    </span>
                 </div>
+
 
                 <div class="summary-card">
                     <span class="summary-label">Total Spent</span>
-                    <strong class="summary-value">KES 27,450</strong>
-                    <span class="summary-note">Current monthly expenses</span>
+
+                    <strong class="summary-value" id="spent-display">
+                        KES 0
+                    </strong>
+
+                    <span class="summary-note">
+                        Current monthly expenses
+                    </span>
                 </div>
+
 
                 <div class="summary-card highlight">
                     <span class="summary-label">Remaining</span>
-                    <strong class="summary-value">KES 22,550</strong>
-                    <span class="summary-note">Available for the rest of the month</span>
+
+                    <strong class="summary-value" id="remaining-display">
+                        KES 50,000
+                    </strong>
+
+                    <span class="summary-note" id="budget-status">
+                        You are within your budget.
+                    </span>
                 </div>
+
+            </section>
+
+
+            <!-- Add Expense -->
+            <section class="expense-form-section" id="expenses">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Track Spending</p>
+                        <h2>Add an Expense</h2>
+                    </div>
+                </div>
+
+
+                <form id="expense-form" class="expense-form">
+
+                    <div class="form-group">
+                        <label for="expense-name">
+                            Expense Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="expense-name"
+                            placeholder="e.g. Grocery Shopping"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="expense-amount">
+                            Amount
+                        </label>
+
+                        <input
+                            type="number"
+                            id="expense-amount"
+                            placeholder="e.g. 2500"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="expense-category">
+                            Category
+                        </label>
+
+                        <select id="expense-category" required>
+                            <option value="">Select category</option>
+                            <option value="Food">Food</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Savings">Savings</option>
+                            <option value="Utilities">Utilities</option>
+                        </select>
+                    </div>
+
+
+                    <button type="submit" class="add-expense-btn">
+                        Add Expense
+                    </button>
+
+                </form>
+
+
+                <p id="form-message" class="form-message"></p>
 
             </section>
 
@@ -119,16 +207,19 @@
                     </div>
                 </div>
 
+
                 <div class="category-grid">
 
                     <article class="category-card" tabindex="0">
                         <div class="category-top">
                             <span class="category-icon">🍔</span>
-                            <span class="category-percentage">24%</span>
+                            <span class="category-percentage" id="food-percentage">0%</span>
                         </div>
 
                         <h3>Food</h3>
-                        <strong>KES 6,580</strong>
+
+                        <strong id="food-total">KES 0</strong>
+
                         <p>Groceries and dining</p>
                     </article>
 
@@ -136,11 +227,13 @@
                     <article class="category-card" tabindex="0">
                         <div class="category-top">
                             <span class="category-icon">🚗</span>
-                            <span class="category-percentage">15%</span>
+                            <span class="category-percentage" id="transport-percentage">0%</span>
                         </div>
 
                         <h3>Transport</h3>
-                        <strong>KES 4,120</strong>
+
+                        <strong id="transport-total">KES 0</strong>
+
                         <p>Fuel and commuting</p>
                     </article>
 
@@ -148,11 +241,13 @@
                     <article class="category-card" tabindex="0">
                         <div class="category-top">
                             <span class="category-icon">🏠</span>
-                            <span class="category-percentage">38%</span>
+                            <span class="category-percentage" id="rent-percentage">0%</span>
                         </div>
 
                         <h3>Rent</h3>
-                        <strong>KES 10,500</strong>
+
+                        <strong id="rent-total">KES 0</strong>
+
                         <p>Monthly accommodation</p>
                     </article>
 
@@ -160,11 +255,13 @@
                     <article class="category-card" tabindex="0">
                         <div class="category-top">
                             <span class="category-icon">🎬</span>
-                            <span class="category-percentage">8%</span>
+                            <span class="category-percentage" id="entertainment-percentage">0%</span>
                         </div>
 
                         <h3>Entertainment</h3>
-                        <strong>KES 2,200</strong>
+
+                        <strong id="entertainment-total">KES 0</strong>
+
                         <p>Movies and activities</p>
                     </article>
 
@@ -172,11 +269,13 @@
                     <article class="category-card" tabindex="0">
                         <div class="category-top">
                             <span class="category-icon">💰</span>
-                            <span class="category-percentage">10%</span>
+                            <span class="category-percentage" id="savings-percentage">0%</span>
                         </div>
 
                         <h3>Savings</h3>
-                        <strong>KES 2,800</strong>
+
+                        <strong id="savings-total">KES 0</strong>
+
                         <p>Monthly savings goal</p>
                     </article>
 
@@ -184,11 +283,13 @@
                     <article class="category-card" tabindex="0">
                         <div class="category-top">
                             <span class="category-icon">💡</span>
-                            <span class="category-percentage">5%</span>
+                            <span class="category-percentage" id="utilities-percentage">0%</span>
                         </div>
 
                         <h3>Utilities</h3>
-                        <strong>KES 1,750</strong>
+
+                        <strong id="utilities-total">KES 0</strong>
+
                         <p>Electricity and internet</p>
                     </article>
 
@@ -198,7 +299,7 @@
 
 
             <!-- Recent Activity -->
-            <section class="activity-section">
+            <section class="activity-section" id="activity">
 
                 <div class="section-heading">
                     <div>
@@ -207,42 +308,12 @@
                     </div>
                 </div>
 
-                <div class="activity-card">
 
-                    <div class="activity-item">
-                        <span class="activity-icon">🍔</span>
+                <div class="activity-card" id="expense-list">
 
-                        <div class="activity-details">
-                            <strong>Grocery Shopping</strong>
-                            <span>Food • Today</span>
-                        </div>
-
-                        <strong class="activity-amount">- KES 2,500</strong>
-                    </div>
-
-
-                    <div class="activity-item">
-                        <span class="activity-icon">🚗</span>
-
-                        <div class="activity-details">
-                            <strong>Fuel</strong>
-                            <span>Transport • Yesterday</span>
-                        </div>
-
-                        <strong class="activity-amount">- KES 1,800</strong>
-                    </div>
-
-
-                    <div class="activity-item">
-                        <span class="activity-icon">💡</span>
-
-                        <div class="activity-details">
-                            <strong>Electricity Bill</strong>
-                            <span>Utilities • This Week</span>
-                        </div>
-
-                        <strong class="activity-amount">- KES 1,200</strong>
-                    </div>
+                    <p class="empty-message">
+                        No expenses added yet. Add your first expense above.
+                    </p>
 
                 </div>
 
@@ -253,7 +324,6 @@
     </div>
 
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
