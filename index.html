@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>SpendWise Dashboard</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,365 +21,227 @@
 
     <div class="dashboard">
 
-        <!-- SIDEBAR -->
+        <!-- Sidebar -->
         <aside class="sidebar">
 
-            <div class="brand">
-                <h1>SpendWise</h1>
-                <p>Smart money management</p>
+            <div class="logo">
+                <span class="logo-icon">S</span>
+                <span>SpendWise</span>
             </div>
 
             <nav class="navigation">
-
-                <a href="#" class="nav-item active">
+                <a href="#" class="nav-link active">
                     <span>📊</span>
-                    <span>Dashboard</span>
+                    Dashboard
                 </a>
 
-                <a href="#" class="nav-item">
-                    <span>💳</span>
-                    <span>Expenses</span>
-                </a>
-
-                <a href="#" class="nav-item">
-                    <span>📁</span>
-                    <span>Categories</span>
-                </a>
-
-                <a href="#" class="nav-item">
+                <a href="#" class="nav-link">
                     <span>💰</span>
-                    <span>Savings</span>
+                    Expenses
                 </a>
 
-                <a href="#" class="nav-item">
+                <a href="#" class="nav-link">
+                    <span>🎯</span>
+                    Budgets
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>📈</span>
+                    Reports
+                </a>
+
+                <a href="#" class="nav-link">
                     <span>⚙️</span>
-                    <span>Settings</span>
+                    Settings
                 </a>
-
             </nav>
-
-            <div class="sidebar-footer">
-                <p>Budget Tracker</p>
-                <span>2026</span>
-            </div>
 
         </aside>
 
 
-        <!-- MAIN CONTENT -->
+        <!-- Main Content -->
         <main class="main-content">
 
-            <!-- HEADER -->
+            <!-- Header -->
             <header class="dashboard-header">
 
-                <div class="welcome">
-                    <p class="eyebrow">Financial Overview</p>
-
-                    <h2>Welcome back!</h2>
-
-                    <p>
-                        Here's an overview of your spending this month.
+                <div>
+                    <p class="eyebrow">Personal Finance</p>
+                    <h1>Dashboard</h1>
+                    <p class="header-subtitle">
+                        Keep track of your spending and stay within your budget.
                     </p>
                 </div>
 
                 <div class="profile">
+                    <div class="profile-avatar">JD</div>
 
-                    <div class="profile-avatar">
-                        JD
-                    </div>
-
-                    <div>
+                    <div class="profile-info">
                         <strong>John Doe</strong>
-                        <span>Personal Account</span>
+                        <span>Budget Planner</span>
                     </div>
-
                 </div>
 
             </header>
 
 
-            <!-- SUMMARY -->
-            <section class="summary">
+            <!-- Summary -->
+            <section class="summary-section">
 
-                <div class="summary-item">
-                    <span>Total Budget</span>
-                    <strong>KSh 50,000</strong>
+                <div class="summary-card">
+                    <span class="summary-label">Monthly Budget</span>
+                    <strong class="summary-value">KES 50,000</strong>
+                    <span class="summary-note">Your planned monthly budget</span>
                 </div>
 
-                <div class="summary-item">
-                    <span>Total Spent</span>
-                    <strong>KSh 27,450</strong>
+                <div class="summary-card">
+                    <span class="summary-label">Total Spent</span>
+                    <strong class="summary-value">KES 27,450</strong>
+                    <span class="summary-note">Current monthly expenses</span>
                 </div>
 
-                <div class="summary-item">
-                    <span>Remaining</span>
-                    <strong>KSh 22,550</strong>
+                <div class="summary-card highlight">
+                    <span class="summary-label">Remaining</span>
+                    <strong class="summary-value">KES 22,550</strong>
+                    <span class="summary-note">Available for the rest of the month</span>
                 </div>
 
             </section>
 
 
-            <!-- CATEGORY SECTION -->
-            <section class="category-section">
+            <!-- Category Cards -->
+            <section>
 
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">Spending Categories</p>
-                        <h2>Monthly Overview</h2>
+                        <p class="eyebrow">Spending Breakdown</p>
+                        <h2>Categories</h2>
                     </div>
-
-                    <span class="month">September 2026</span>
                 </div>
 
-
-                <!-- CATEGORY CARDS -->
                 <div class="category-grid">
 
-                    <!-- FOOD -->
-                    <a href="#" class="category-card">
-
-                        <div class="card-top">
-                            <div class="category-icon food">
-                                🍔
-                            </div>
-
-                            <span class="percentage">
-                                24%
-                            </span>
+                    <article class="category-card" tabindex="0">
+                        <div class="category-top">
+                            <span class="category-icon">🍔</span>
+                            <span class="category-percentage">24%</span>
                         </div>
 
-                        <div class="card-content">
-                            <h3>Food</h3>
+                        <h3>Food</h3>
+                        <strong>KES 6,580</strong>
+                        <p>Groceries and dining</p>
+                    </article>
 
-                            <p>
-                                Groceries and meals
-                            </p>
+
+                    <article class="category-card" tabindex="0">
+                        <div class="category-top">
+                            <span class="category-icon">🚗</span>
+                            <span class="category-percentage">15%</span>
                         </div>
 
-                        <div class="amount">
-                            <strong>KSh 6,600</strong>
-                            <span>of KSh 10,000</span>
+                        <h3>Transport</h3>
+                        <strong>KES 4,120</strong>
+                        <p>Fuel and commuting</p>
+                    </article>
+
+
+                    <article class="category-card" tabindex="0">
+                        <div class="category-top">
+                            <span class="category-icon">🏠</span>
+                            <span class="category-percentage">38%</span>
                         </div>
 
-                        <div class="progress">
-                            <div class="progress-bar food-progress"></div>
+                        <h3>Rent</h3>
+                        <strong>KES 10,500</strong>
+                        <p>Monthly accommodation</p>
+                    </article>
+
+
+                    <article class="category-card" tabindex="0">
+                        <div class="category-top">
+                            <span class="category-icon">🎬</span>
+                            <span class="category-percentage">8%</span>
                         </div>
 
-                    </a>
+                        <h3>Entertainment</h3>
+                        <strong>KES 2,200</strong>
+                        <p>Movies and activities</p>
+                    </article>
 
 
-                    <!-- TRANSPORT -->
-                    <a href="#" class="category-card">
-
-                        <div class="card-top">
-                            <div class="category-icon transport">
-                                🚌
-                            </div>
-
-                            <span class="percentage">
-                                12%
-                            </span>
+                    <article class="category-card" tabindex="0">
+                        <div class="category-top">
+                            <span class="category-icon">💰</span>
+                            <span class="category-percentage">10%</span>
                         </div>
 
-                        <div class="card-content">
-                            <h3>Transport</h3>
+                        <h3>Savings</h3>
+                        <strong>KES 2,800</strong>
+                        <p>Monthly savings goal</p>
+                    </article>
 
-                            <p>
-                                Bus fare and fuel
-                            </p>
+
+                    <article class="category-card" tabindex="0">
+                        <div class="category-top">
+                            <span class="category-icon">💡</span>
+                            <span class="category-percentage">5%</span>
                         </div>
 
-                        <div class="amount">
-                            <strong>KSh 3,200</strong>
-                            <span>of KSh 6,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar transport-progress"></div>
-                        </div>
-
-                    </a>
-
-
-                    <!-- RENT -->
-                    <a href="#" class="category-card">
-
-                        <div class="card-top">
-                            <div class="category-icon rent">
-                                🏠
-                            </div>
-
-                            <span class="percentage">
-                                55%
-                            </span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Rent</h3>
-
-                            <p>
-                                Monthly house rent
-                            </p>
-                        </div>
-
-                        <div class="amount">
-                            <strong>KSh 15,000</strong>
-                            <span>of KSh 15,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar rent-progress"></div>
-                        </div>
-
-                    </a>
-
-
-                    <!-- ENTERTAINMENT -->
-                    <a href="#" class="category-card">
-
-                        <div class="card-top">
-                            <div class="category-icon entertainment">
-                                🎮
-                            </div>
-
-                            <span class="percentage">
-                                8%
-                            </span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Entertainment</h3>
-
-                            <p>
-                                Movies and leisure
-                            </p>
-                        </div>
-
-                        <div class="amount">
-                            <strong>KSh 2,150</strong>
-                            <span>of KSh 5,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar entertainment-progress"></div>
-                        </div>
-
-                    </a>
-
-
-                    <!-- SAVINGS -->
-                    <a href="#" class="category-card">
-
-                        <div class="card-top">
-                            <div class="category-icon savings">
-                                💰
-                            </div>
-
-                            <span class="percentage">
-                                30%
-                            </span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Savings</h3>
-
-                            <p>
-                                Emergency fund
-                            </p>
-                        </div>
-
-                        <div class="amount">
-                            <strong>KSh 8,000</strong>
-                            <span>of KSh 10,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar savings-progress"></div>
-                        </div>
-
-                    </a>
-
-
-                    <!-- UTILITIES -->
-                    <a href="#" class="category-card">
-
-                        <div class="card-top">
-                            <div class="category-icon utilities">
-                                💡
-                            </div>
-
-                            <span class="percentage">
-                                15%
-                            </span>
-                        </div>
-
-                        <div class="card-content">
-                            <h3>Utilities</h3>
-
-                            <p>
-                                Electricity and water
-                            </p>
-                        </div>
-
-                        <div class="amount">
-                            <strong>KSh 2,500</strong>
-                            <span>of KSh 4,000</span>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar utilities-progress"></div>
-                        </div>
-
-                    </a>
+                        <h3>Utilities</h3>
+                        <strong>KES 1,750</strong>
+                        <p>Electricity and internet</p>
+                    </article>
 
                 </div>
 
             </section>
 
 
-            <!-- RECENT ACTIVITY -->
-            <section class="activity">
+            <!-- Recent Activity -->
+            <section class="activity-section">
 
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">Recent Activity</p>
-                        <h2>Latest Expenses</h2>
+                        <p class="eyebrow">Transactions</p>
+                        <h2>Recent Activity</h2>
                     </div>
                 </div>
 
-                <div class="activity-list">
+                <div class="activity-card">
 
                     <div class="activity-item">
-                        <span>🛒</span>
+                        <span class="activity-icon">🍔</span>
 
-                        <div>
-                            <strong>Groceries</strong>
-                            <small>Food • Today</small>
+                        <div class="activity-details">
+                            <strong>Grocery Shopping</strong>
+                            <span>Food • Today</span>
                         </div>
 
-                        <b>- KSh 500</b>
+                        <strong class="activity-amount">- KES 2,500</strong>
                     </div>
 
-                    <div class="activity-item">
-                        <span>🚌</span>
 
-                        <div>
-                            <strong>Bus Fare</strong>
-                            <small>Transport • Yesterday</small>
+                    <div class="activity-item">
+                        <span class="activity-icon">🚗</span>
+
+                        <div class="activity-details">
+                            <strong>Fuel</strong>
+                            <span>Transport • Yesterday</span>
                         </div>
 
-                        <b>- KSh 100</b>
+                        <strong class="activity-amount">- KES 1,800</strong>
                     </div>
 
-                    <div class="activity-item">
-                        <span>🏠</span>
 
-                        <div>
-                            <strong>House Rent</strong>
-                            <small>Rent • 2 September</small>
+                    <div class="activity-item">
+                        <span class="activity-icon">💡</span>
+
+                        <div class="activity-details">
+                            <strong>Electricity Bill</strong>
+                            <span>Utilities • This Week</span>
                         </div>
 
-                        <b>- KSh 15,000</b>
+                        <strong class="activity-amount">- KES 1,200</strong>
                     </div>
 
                 </div>
@@ -391,6 +252,9 @@
 
     </div>
 
-</body>
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
 </html>
